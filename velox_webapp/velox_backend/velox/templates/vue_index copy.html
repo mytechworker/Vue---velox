@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+
+{% endblock %}
+{% block body %}
+    <body class="container-fluid">
+    <div id="app">
+        <script type="application/javascript" src="{% static 'velox/js/main.js' %}?v={% now 'f' %}"></script>
+    </div>
+    </body>
+{% endblock body %}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+
+<h1>Upload {{ upload_type }}</h1>
+{% if column_names %}
+<h3>Expected Columns: {{ column_names }}</h3>
+    <h4>Order is not important but naming is. columns not listed here are ignored</h4>
+    <h4>Date fields should be in format: "1/15/23"</h4>
+{% endif %}
+<form method='post' enctype="multipart/form-data" action="{{ post_url }}">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
+
+
+</body>
+</html>
